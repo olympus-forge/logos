@@ -6,6 +6,13 @@ import (
 	"strings"
 )
 
+const (
+	Debug string = "DEBUG"
+	Info  string = "INFO"
+	Warn  string = "WARN"
+	Error string = "ERROR"
+)
+
 type LogEntry struct {
 	logger *slog.Logger
 	app    map[string]interface{}
@@ -58,13 +65,13 @@ func GetLogLevel() slog.Level {
 	level := strings.ToUpper(os.Getenv("LOG_LEVEL"))
 
 	switch level {
-	case "DEBUG":
+	case Debug:
 		return slog.LevelDebug
-	case "INFO":
+	case Info:
 		return slog.LevelInfo
-	case "WARN", "WARNING":
+	case Warn:
 		return slog.LevelWarn
-	case "ERROR":
+	case Error:
 		return slog.LevelError
 	default:
 		return slog.LevelInfo // default fallback
