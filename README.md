@@ -10,7 +10,7 @@
 - Supports `TextHandler` (local dev) and `JSONHandler` (production/observability).
 
 NOTE :
- -  `ward` uses `slog` internally, so you can use it as well.
+ -  `logs` uses `slog` internally, so you can use it as well.
  - args must be in pairs k/v, e.g. `key1, val1, key2, val2` don't set single key args
 
 
