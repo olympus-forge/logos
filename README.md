@@ -17,7 +17,7 @@ NOTE :
 ### 2. Usage
 ```go
 import (
-	"github.com/yudhiana/logos"
+	"github.com/olympus-forge/logos"
 )
 
 
